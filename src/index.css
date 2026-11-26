@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #F8F6F1;
+    --bg-card: #FFFFFF;
+    --teal-primary: #3F7375;
+    --teal-dark: #2F595B;
+    --teal-soft: #E9F1F1;
+    --text-charcoal: #1E2525;
+    --text-muted: #5B6666;
+    --border-subtle: #E6E2D9;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', 'Noto Sans Telugu', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-charcoal);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+@keyframes wave-bar {
+  0%, 100% {
+    transform: scaleY(0.28);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.animate-wave-bar {
+  animation: wave-bar 0.9s ease-in-out infinite;
+}
